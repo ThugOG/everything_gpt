@@ -3,11 +3,10 @@ import express from "express";
 import * as dotenv from "dotenv";
 
 import { OpenAIApi, Configuration } from "openai";
-
+dotenv.config()
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: process.env.OPEN_AI_API,
 });
-
 const router = express.Router();
 const openai = new OpenAIApi(configuration);
 router.route("/dalle").get((req, res) => {
