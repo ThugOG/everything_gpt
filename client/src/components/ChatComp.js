@@ -2,15 +2,27 @@ import React, { useState, useEffect } from "react";
 
 const ChatComp = () => {
   const [searchText, setSearchText] = useState("");
+  const [data, setData] = useState("")
   const handleSearchText = (e) => {
     setSearchText(e.target.value);
   };
   const getGPTResponse = async() => {
     try{
-        const data = await fetch("")
+        const data = await fetch("https://everything-gpt.onrender.com/api/chat/response",{
+          method: "POST",
+          headers:{
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            prompt: searchText,
+          })
+        })
+        const json = await data.json();
+        console.log(json.message.content)
+        setData(json.message.content)
     }
-    catch(errr){
-        
+    catch(err){
+        console.log(err)
     }
   };
   return (
@@ -23,9 +35,9 @@ const ChatComp = () => {
           placeholder="Ask Anything"
           onChange={handleSearchText}
         ></input>
-        <button onClick={getGPTResponse}>GET</button>
+        <button className="get_res" onClick={getGPTResponse}>GET</button>
       </div>
-      <div className="response"></div>
+      <div className="response">{data}</div>
     </div>
   );
 };
