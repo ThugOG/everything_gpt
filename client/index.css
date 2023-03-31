@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,700;1,400&family=Open+Sans:wght@400;600;700&family=Overpass:wght@400;700&family=Poppins&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: black
+}
+.header{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 70vw;
+    border-bottom: 2px solid grey;
+}
+.header > img{
+    height: 50px;
+    width: 150px;
+}
+.body_comp{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    /* position: relative; */
+}
+.dynamic_greet{
+    display: flex;
+    font-size: 30px;
+    color: white;
+    position: relative;
+    transition: all 4s ease;
+}
+.dynamic_greet> div > span{
+    color: rgb(95, 95, 222);
+    font-weight: bold;
+}
+.dynamic_greet::before,
+.dynamic_greet::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.dynamic_greet::before{
+    background-color: black;
+    animation: typewriter 4s ease forwards;
+}
+.animate_hand{
+    animation: wave 2s ease infinite;
+    /* border: 2px solid white; */
+    transform-origin: 70% 70%;
+}
+.body_text{
+    border: 2px solid white;
+    color: white;
+    padding: 20px;
+}
+.body_text > h1{
+    font-size: 3rem;
+}
+.body_text > p {
+    color: rgb(95, 95, 222)
+}
+.arrow > img{
+
+    position: absolute;
+    top: 300px;
+    left: 170px;
+    height: 150px;
+    width: 200px;
+}
+@keyframes typewriter {
+    to{
+        left: 100%;
+    }
+}
+@keyframes wave {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+.ChatComp{
+    border: 1px solid white;
+    padding: 20px;
+    margin-top: 30px;
+    height: 300px;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ChatComp > h1{
+    color: white;
+
+}
+.input > input{
+    height: 50px;
+    width: 350px;
+    font-size: 1.25rem;
+    padding: 5px;
+}
+.input > button{
+    height: 50px;
+    font-size: 1.25rem;
+    width: 70px;
+    background-color: black;
+    color: rgb(95, 95, 222);
+    border: 2px solid rgb(95, 95, 222);
+    font-weight: bold;
+    transition: all 1s ease;
+}
+.input > button:hover{
+    background-color: rgb(95, 95, 222);
+    color: black;
+    cursor: pointer;
+}
+.response{
+    border: 2px solid white;
+    height: 200px;
+    background-color: white;
+}
