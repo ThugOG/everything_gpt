@@ -1,4 +1,4 @@
-# EverythingGPT with OpenAI API and ReactJS
+# EverythingGPT with OpenAI API and ReactJS 😉
 ![](https://imgtr.ee/images/2023/04/01/UmxvL.png)
 This site is live [Here](https://black-rhino-382411.de.r.appspot.com/).
 
