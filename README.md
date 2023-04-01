@@ -1,6 +1,6 @@
 # EverythingGPT with OpenAI API and ReactJS
 ![](https://imgtr.ee/images/2023/04/01/UmxvL.png)
-SITE IS LIVE AT ![](https://black-rhino-382411.de.r.appspot.com/)
+![LIVE AT](https://black-rhino-382411.de.r.appspot.com/)
 
 This is a web-based chat application that uses the OpenAI API to generate responses to user messages. The application is built using ReactJS, and communicates with the OpenAI API using the `openai` npm package.
 
