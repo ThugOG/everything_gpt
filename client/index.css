@@ -1,29 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,700;1,400&family=Open+Sans:wght@400;600;700&family=Overpass:wght@400;700&family=Poppins&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Poppins";
 }
-body{
+
+body {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background-color: black
 }
-.header{
+
+.header {
     display: flex;
     align-items: center;
     height: 100px;
     width: 70vw;
     border-bottom: 2px solid grey;
 }
-.header > img{
+
+.header>img {
     height: 50px;
     width: 150px;
 }
-.body_comp{
+
+.body_comp {
     margin-top: 150px;
     display: flex;
     justify-content: center;
@@ -31,19 +36,22 @@ body{
     gap: 30px;
     /* position: relative; */
 }
-.dynamic_greet{
+
+.dynamic_greet {
     display: flex;
     font-size: 30px;
     color: white;
     position: relative;
     transition: all 4s ease;
 }
-.dynamic_greet> div > span{
+
+.dynamic_greet>div>span {
     color: rgb(95, 95, 222);
     font-weight: bold;
 }
+
 .dynamic_greet::before,
-.dynamic_greet::after{
+.dynamic_greet::after {
     content: "";
     position: absolute;
     top: 0;
@@ -51,27 +59,33 @@ body{
     left: 0;
     right: 0;
 }
-.dynamic_greet::before{
+
+.dynamic_greet::before {
     background-color: black;
     animation: typewriter 4s ease forwards;
 }
-.animate_hand{
+
+.animate_hand {
     animation: wave 2s ease infinite;
     /* border: 2px solid white; */
     transform-origin: 70% 70%;
 }
-.body_text{
-    border: 2px solid  rgb(95, 95, 222);
+
+.body_text {
+    /* border: 2px solid rgb(95, 95, 222); */
     color: white;
     padding: 20px;
 }
-.body_text > h1{
+
+.body_text>h1 {
     font-size: 3rem;
 }
-.body_text > p {
+
+.body_text>p {
     color: rgb(95, 95, 222)
 }
-.arrow > img{
+
+.arrow>img {
 
     position: absolute;
     top: 300px;
@@ -79,23 +93,51 @@ body{
     height: 150px;
     width: 200px;
 }
+
 @keyframes typewriter {
-    to{
+    to {
         left: 100%;
     }
 }
+
 @keyframes wave {
-    0% { transform: rotate( 0.0deg) }
-   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
-   20% { transform: rotate(-8.0deg) }
-   30% { transform: rotate(14.0deg) }
-   40% { transform: rotate(-4.0deg) }
-   50% { transform: rotate(10.0deg) }
-   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
-  100% { transform: rotate( 0.0deg) }
+    0% {
+        transform: rotate(0.0deg)
+    }
+
+    10% {
+        transform: rotate(14.0deg)
+    }
+
+    /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+        transform: rotate(-8.0deg)
+    }
+
+    30% {
+        transform: rotate(14.0deg)
+    }
+
+    40% {
+        transform: rotate(-4.0deg)
+    }
+
+    50% {
+        transform: rotate(10.0deg)
+    }
+
+    60% {
+        transform: rotate(0.0deg)
+    }
+
+    /* Reset for the last half to pause */
+    100% {
+        transform: rotate(0.0deg)
+    }
 }
-.ChatComp{
-    border: 1px solid  rgb(95, 95, 222);
+
+.ChatComp {
+    /* border: 1px solid rgb(95, 95, 222); */
     padding: 10px;
     margin-top: 30px;
     height: 300px;
@@ -104,9 +146,10 @@ body{
     flex-direction: column;
     gap: 10px;
 }
-.DalleComp{
+
+.DalleComp {
     color: white;
-    border: 1px solid  rgb(95, 95, 222);
+    /* border: 1px solid rgb(95, 95, 222); */
     padding: 10px;
     margin-top: 30px;
     /* height: 300px; */
@@ -115,23 +158,31 @@ body{
     flex-direction: column;
     gap: 10px;
 }
-.ChatComp > h1{
+
+.ChatComp>h1 {
     color: white;
 
 }
-.inputDalle > input , .input > input{
+
+.inputDalle>input, .input>input {
     height: 50px;
     width: 350px;
     font-size: 1.25rem;
     padding: 5px;
 }
-.response{
+
+.response {
     border: 2px solid white;
     height: 200px;
     background-color: white;
     overflow: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: rgb(95, 95, 222)
 }
-.response_dalle{
+
+.response_dalle {
     display: flex;
     padding: 20px;
     background-color: black;
@@ -140,16 +191,19 @@ body{
     height: 500px;
     /* background-color: white; */
 }
-.response_dalle>img{
+
+.response_dalle>img {
     background-color: white;
     border: 1px solid white;
     height: 450px;
     width: 700px;
 }
-.response{
+
+.response {
     font-size: 1.25rem;
 }
-.footer{
+
+.footer {
     height: 70px;
     width: 100%;
     /* border: 1px solid white; */
@@ -159,7 +213,8 @@ body{
     justify-content: center;
     align-items: center;
 }
-.get_res, .get_dalle{
+
+.get_res, .get_dalle {
     height: 50px;
     font-size: 1.25rem;
     width: max-content;
@@ -170,7 +225,8 @@ body{
     transition: all 0.3s ease;
     padding: 0 10px;
 }
-.get_dalle_random{
+
+.get_dalle_random {
     height: 50px;
     font-size: 1.25rem;
     width: max-content;
@@ -183,8 +239,34 @@ body{
 
 }
 
-.get_res:hover,.get_dalle:hover, .get_dalle_random:hover{
+.get_res:hover, .get_dalle:hover, .get_dalle_random:hover {
     background-color: rgb(95, 95, 222);
     color: black;
     cursor: pointer;
+}
+
+
+/* Loading Screen */
+
+.loading_screen {
+    position: absolute;
+    /* top: 0; */
+    align-self: center;
+    
+    height: 50px;
+    width: 50px;
+    border: 7px solid black;
+    border-radius: 50%;
+    border-top: 7px solid rgb(95, 95, 222);
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
 }
